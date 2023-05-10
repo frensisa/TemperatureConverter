@@ -95,8 +95,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TempNavigator" id="q61-sM-G0z">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="Xg2-Jy-4a7"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="hK1-Et-4ve"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="info" catalog="system" id="Xg2-Jy-4a7"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="moonphase.last.quarter" catalog="system" id="hK1-Et-4ve"/>
                     </navigationItem>
                     <connections>
                         <outlet property="celciusLabel" destination="ckw-l8-O2V" id="sE8-0x-cmK"/>
@@ -128,7 +128,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="info" catalog="system" width="93" height="128"/>
         <image name="moon.fill" catalog="system" width="128" height="123"/>
+        <image name="moonphase.last.quarter" catalog="system" width="128" height="123"/>
         <image name="sun.min.fill" catalog="system" width="128" height="123"/>
         <image name="tempDay" width="400" height="1000"/>
         <systemColor name="systemBackgroundColor">

@@ -29,26 +29,39 @@ class ViewController: UIViewController {
 
 
     @IBAction func sliderValueChanged(_ sender: Any) {
-        print("tempSlider:", tempSlider.value)
-        updateResultLabelValue(value: tempSlider.value)
+        //print("tempSlider:", tempSlider.value)
+        updateResultLabelValue(value: Double(tempSlider.value))
     }
     
     @IBAction func segmentValueChanged(_ sender: Any) {
-        updateResultLabelValue(value: tempSlider.value)
+        updateResultLabelValue(value: Double(tempSlider.value))
     }
-    func updateResultLabelValue(value: Float){
+    func updateResultLabelValue(value: Double){
         print(value)
+        //let celsiusTemp = Int(value)
         
-        let celsiusTemp = Int(value)
-        celciusLabel.text = "\(celsiusTemp) C°"
-        
+        let celsiusTemp = Measurement(value: value, unit: UnitTemperature.celsius)
+        celciusLabel.text = "\(celsiusTemp)"
+        let fahrTemp = celsiusTemp.converted(to: .fahrenheit).value
+        let formattedFahrTemp = String(format: "%.2f", fahrTemp)
+        resultLabel.text = "\(formattedFahrTemp) F°"
+//        let celsiusTemp = Int(value)
+//        celciusLabel.text = "\(celsiusTemp) C°"
+//        let fahrTemp = Double(value*1.8+32)
+//        let fomattedFahrTemp = String(format: "%.2f", fahrTemp)
+//        resultLabel.text = "\(fomattedFahrTemp) F°"
+//
         var convertedTempString = ""
         #warning("switch case for calculation")
         // convertedTempString = convertTempFrom(celsius: celsiusTemp)
+        
     }
     
     func convertTempFrom(celsius: Int) -> (fahrenheit: Double, kelvin: Double){
-        // calculation from cels to fahr and from cels to kelv
+        #warning("calculation from cels to fahr and from cels to kelv")
+        
+       
+        
         return(0,0)
     }
     
