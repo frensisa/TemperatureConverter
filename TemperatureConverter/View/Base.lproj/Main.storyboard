@@ -101,6 +101,7 @@
                     <connections>
                         <outlet property="celciusLabel" destination="ckw-l8-O2V" id="sE8-0x-cmK"/>
                         <outlet property="resultLabel" destination="t7E-IE-78G" id="4xf-eh-C7s"/>
+                        <outlet property="tempSegmentControler" destination="6ms-yY-T7e" id="DBn-Ms-hml"/>
                         <outlet property="tempSlider" destination="xWH-If-WXY" id="XbX-S0-AdF"/>
                     </connections>
                 </viewController>

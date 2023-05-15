@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var celciusLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
     
+    @IBOutlet weak var tempSegmentControler: UISegmentedControl!
     @IBOutlet weak var tempSlider: UISlider!{
         didSet{
             tempSlider.maximumValue = 100
@@ -40,29 +41,34 @@ class ViewController: UIViewController {
         print(value)
         //let celsiusTemp = Int(value)
         
-        let celsiusTemp = Measurement(value: value, unit: UnitTemperature.celsius)
-        celciusLabel.text = "\(celsiusTemp)"
-        let fahrTemp = celsiusTemp.converted(to: .fahrenheit).value
-        let formattedFahrTemp = String(format: "%.2f", fahrTemp)
-        resultLabel.text = "\(formattedFahrTemp) F°"
-//        let celsiusTemp = Int(value)
-//        celciusLabel.text = "\(celsiusTemp) C°"
-//        let fahrTemp = Double(value*1.8+32)
-//        let fomattedFahrTemp = String(format: "%.2f", fahrTemp)
-//        resultLabel.text = "\(fomattedFahrTemp) F°"
-//
+       
+        let celsiusTemp = Int(value)
+        celciusLabel.text = "\(celsiusTemp) C°"
+        let fahrTemp = Double(value*1.8+32)
+        let fomattedFahrTemp = String(format: "%.2f", fahrTemp)
+        resultLabel.text = "\(fomattedFahrTemp) F°"
+
         var convertedTempString = ""
-        #warning("switch case for calculation")
+        //#warning("switch case for calculation")
         // convertedTempString = convertTempFrom(celsius: celsiusTemp)
+        switch tempSegmentControler.selectedSegmentIndex{
+        case 0:
+            let fahrenheitTempString = String(format: "%.2f", convertTempFrom(celsius: celsiusTemp).fahrenheit)
+            convertedTempString = fahrenheitTempString + " F°"
+        default:
+            let kelvinTempString = String(format: "%.2f", convertTempFrom(celsius: celsiusTemp).kelvin)
+            convertedTempString = kelvinTempString + " K°"
         
+        }
+        resultLabel.text = convertedTempString
     }
     
     func convertTempFrom(celsius: Int) -> (fahrenheit: Double, kelvin: Double){
-        #warning("calculation from cels to fahr and from cels to kelv")
+     //   #warning("calc from cels to fahr and from cels to kelv")
+        let fahrenheit = Double(celsius) * 1.8 + 32 
+        let kelvin = Double(celsius) + 273.15
         
-       
-        
-        return(0,0)
+        return(fahrenheit,kelvin)
     }
     
     
