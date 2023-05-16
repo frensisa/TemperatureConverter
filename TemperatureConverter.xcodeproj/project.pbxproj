@@ -13,6 +13,8 @@
 		156C800B2A07AF3400C00316 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 156C80092A07AF3400C00316 /* Main.storyboard */; };
 		156C800D2A07AF3A00C00316 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 156C800C2A07AF3A00C00316 /* Assets.xcassets */; };
 		156C80102A07AF3A00C00316 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 156C800E2A07AF3A00C00316 /* LaunchScreen.storyboard */; };
+		15BCC4652A12EB5200DB6B6D /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BCC4642A12EB5200DB6B6D /* InfoViewController.swift */; };
+		15BCC4672A12ED1600DB6B6D /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BCC4662A12ED1600DB6B6D /* ThemeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		156C800C2A07AF3A00C00316 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		156C800F2A07AF3A00C00316 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		156C80112A07AF3A00C00316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15BCC4642A12EB5200DB6B6D /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		15BCC4662A12ED1600DB6B6D /* ThemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				156C80072A07AF3400C00316 /* ViewController.swift */,
+				15BCC4642A12EB5200DB6B6D /* InfoViewController.swift */,
+				15BCC4662A12ED1600DB6B6D /* ThemeViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -162,8 +168,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15BCC4672A12ED1600DB6B6D /* ThemeViewController.swift in Sources */,
 				156C80082A07AF3400C00316 /* ViewController.swift in Sources */,
 				156C80042A07AF3400C00316 /* AppDelegate.swift in Sources */,
+				15BCC4652A12EB5200DB6B6D /* InfoViewController.swift in Sources */,
 				156C80062A07AF3400C00316 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

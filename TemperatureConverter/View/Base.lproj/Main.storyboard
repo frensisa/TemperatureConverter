@@ -95,8 +95,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TempNavigator" id="q61-sM-G0z">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="info" catalog="system" id="Xg2-Jy-4a7"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="moonphase.last.quarter" catalog="system" id="hK1-Et-4ve"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="info" catalog="system" id="Xg2-Jy-4a7">
+                            <connections>
+                                <segue destination="Q1R-N7-Jtn" kind="show" id="bYy-pJ-dOp"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="moonphase.last.quarter" catalog="system" id="hK1-Et-4ve">
+                            <connections>
+                                <segue destination="ua6-wM-gjS" kind="presentation" id="SQX-f9-pyP"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="celciusLabel" destination="ckw-l8-O2V" id="sE8-0x-cmK"/>
@@ -108,6 +116,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1096.875" y="3.1690140845070425"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="oaq-Dx-NeW">
+            <objects>
+                <viewController id="Q1R-N7-Jtn" customClass="InfoViewController" customModule="TemperatureConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fMK-bQ-4F2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="App Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YI6-y1-nWJ">
+                                <rect key="frame" x="51" y="176" width="84" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Made by " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftz-38-bWG">
+                                <rect key="frame" x="118" y="483" width="84" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IZv-zz-t58"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ncc-Yz-4au"/>
+                    <connections>
+                        <outlet property="infoLabel" destination="YI6-y1-nWJ" id="oS7-p0-c2R"/>
+                        <outlet property="nameLabel" destination="ftz-38-bWG" id="W04-n9-EbG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JQX-Jb-gip" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1096.875" y="688.73239436619724"/>
+        </scene>
+        <!--Theme View Controller-->
+        <scene sceneID="4EN-IA-aqf">
+            <objects>
+                <viewController id="ua6-wM-gjS" customClass="ThemeViewController" customModule="TemperatureConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dp3-kf-3hF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="dOi-aB-EUb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="24Q-bD-FOj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1898" y="3"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ysq-T2-N0M">

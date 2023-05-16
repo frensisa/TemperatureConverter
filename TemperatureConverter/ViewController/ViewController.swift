@@ -26,9 +26,17 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         celciusLabel.text = "0 C°"
         resultLabel.text = "32 F°"
+        
+      
     }
 
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Info" {
+            guard let vc = segue.destination as? InfoViewController else {return}
+            vc.infoText = "Info ViewController"
+            vc.nameText = "iOS"
+        }
+    }
     @IBAction func sliderValueChanged(_ sender: Any) {
         //print("tempSlider:", tempSlider.value)
         updateResultLabelValue(value: Double(tempSlider.value))
@@ -65,7 +73,7 @@ class ViewController: UIViewController {
     
     func convertTempFrom(celsius: Int) -> (fahrenheit: Double, kelvin: Double){
      //   #warning("calc from cels to fahr and from cels to kelv")
-        let fahrenheit = Double(celsius) * 1.8 + 32 
+        let fahrenheit = Double(celsius) * 1.8 + 32
         let kelvin = Double(celsius) + 273.15
         
         return(fahrenheit,kelvin)
